@@ -117,6 +117,9 @@ class Bomb:
 
 class Beam:
     def __init__(self,bird: Bird):
+        """
+        スペスキーを押すとこうかとんからビームがでるようにする
+        """
         self.img = pg.transform.rotozoom(pg.image.load("fig/beam.png"), 0, 2.0)
         self.rct: pg.Rect = self.img.get_rect()
         self.rct.left = bird.rct.right
